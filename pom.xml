@@ -32,7 +32,6 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -50,8 +49,6 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.1.0</version>
         </dependency>
-
-
 
     </dependencies>
 
@@ -71,5 +68,17 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Distribution Management for Nexus -->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://192.168.50.4:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://192.168.50.4:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
